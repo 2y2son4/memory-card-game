@@ -1,0 +1,19 @@
+// flex
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
+// mediaqueries
+@mixin tablet {
+  @media all and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media all and (min-width: 1200px) {
+    @content;
+  }
+}

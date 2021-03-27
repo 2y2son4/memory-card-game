@@ -1,0 +1,92 @@
+.header {
+  height: 100vh;
+  width: 100%;
+  @include flexCenter {
+    flex-direction: column;
+  }
+  margin: rem(10);
+  &__img {
+    width: rem(600);
+    margin: rem(20);
+  }
+  &__text {
+    font-size: rem(30);
+    color: $green2;
+    margin-bottom: rem(20);
+  }
+  animation: fly-on-top 1.5s 1;
+}
+
+@keyframes fly-on-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.carrot {
+  &_A {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: rem(80);
+    height: rem(100);
+    margin: rem(30);
+    background-image: url('.././images/carrot_a.svg');
+    background-repeat: no-repeat;
+    animation: carrot_A_C 0.4s 4;
+  }
+  &_B {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: rem(80);
+    height: rem(100);
+    margin: rem(30);
+    background-image: url('.././images/carrot_b.svg');
+    background-repeat: no-repeat;
+    animation: carrot_B_D 0.4s 4;
+  }
+  &_C {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: rem(80);
+    height: rem(100);
+    margin: rem(30);
+    background-image: url('.././images/carrot_c.svg');
+    background-repeat: no-repeat;
+    animation: carrot_A_C 0.4s 4;
+  }
+  &_D {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: rem(80);
+    height: rem(100);
+    margin: rem(30);
+    background-image: url('.././images/carrot_d.svg');
+    background-repeat: no-repeat;
+    animation: carrot_B_D 0.4s 4;
+  }
+}
+@keyframes carrot_A_C {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes carrot_B_D {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

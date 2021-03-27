@@ -1,0 +1,45 @@
+.main {
+  @include flexCenter;
+  padding: 2rem;
+  &__grid {
+    cursor: url('../images/cursor_HALP.png'), auto;
+    @include flexCenter;
+    flex-wrap: wrap;
+    max-width: rem(800);
+    &-img {
+      margin: rem(5);
+      border: rem(4) solid $green1;
+      border-radius: rem(10);
+      box-shadow: rem(2) rem(2) rem(4) rem(1) $green2;
+      transition: $trans;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.btn {
+  cursor: pointer;
+  font-size: rem(18);
+  font-weight: bold;
+  color: $green3;
+  border: rem(4) solid $orange4;
+  border-radius: rem(10);
+  background-color: $orange3;
+  transition: $trans;
+  &:hover {
+    background-color: $orange2;
+    border: rem(4) solid $orange3;
+    color: $green2;
+  }
+  &__icon {
+    font-size: rem(30);
+    padding: rem(10);
+    transition: $trans;
+    &:hover {
+      transform: rotate(360deg);
+      color: $green2;
+    }
+  }
+}
