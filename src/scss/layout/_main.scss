@@ -1,6 +1,8 @@
 .main {
   @include flexCenter;
-  padding: 2rem;
+  @include tablet {
+    padding: rem(20);
+  }
   &__grid {
     cursor: url('../images/cursor_HALP.png'), auto;
     @include flexCenter;
