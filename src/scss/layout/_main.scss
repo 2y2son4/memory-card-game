@@ -4,7 +4,7 @@
     padding: rem(20);
   }
   &__grid {
-    cursor: url('../images/cursor_HALP.png'), auto;
+    cursor: url('../images/cursor_HALP2.png'), auto;
     @include flexCenter;
     flex-wrap: wrap;
     max-width: rem(800);
@@ -22,7 +22,7 @@
 }
 
 .btn {
-  cursor: pointer;
+  cursor: url('../images/cursor_reset.png'), auto;
   font-size: rem(18);
   font-weight: bold;
   color: $green3;
