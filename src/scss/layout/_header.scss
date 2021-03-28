@@ -1,5 +1,4 @@
 .header {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -26,9 +25,10 @@
   &__text {
     font-size: rem(18);
     color: $green2;
-    margin-bottom: rem(20);
+    margin: rem(10) auto;
     @include tablet {
       font-size: rem(30);
+      margin: rem(20) auto;
     }
   }
   animation: fly-on-top 1.5s 1;

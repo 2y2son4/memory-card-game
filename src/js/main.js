@@ -1,9 +1,16 @@
 /* eslint-disable no-console */
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-  //card options
+const grid = document.querySelector('.main__grid');
+const resultDisplay = document.querySelector('.result');
+const resetBtn = document.querySelector('.reset');
 
+let cardsChosen = [];
+let cardsChosenId = [];
+let cardsWon = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+  // card options
   const cardArray = [
     {
       name: 'ale-01',
@@ -105,16 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cardArray.sort(() => 0.5 - Math.random());
 
-  const grid = document.querySelector('.main__grid');
-  const resultDisplay = document.querySelector('.result');
-  const resetBtn = document.querySelector('.reset');
-
-  let cardsChosen = [];
-  let cardsChosenId = [];
-  let cardsWon = [];
-
   // create board
-
   function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
       const card = document.createElement('img');
@@ -177,13 +175,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // reset button
-  function resetGame() {
-    location.reload();
-  }
-  resetBtn.addEventListener('click', resetGame);
-
   createBoard();
 });
+
+// reset button
+function resetGame() {
+  location.reload();
+}
+resetBtn.addEventListener('click', resetGame);
 
 console.log('Feliz punteaños, tata 😘');

@@ -17,6 +17,10 @@
       }
     }
   }
+  @include tablet {
+    position: fixed;
+    bottom: 0;
+  }
 }
 
 .fly-in-bottom {
