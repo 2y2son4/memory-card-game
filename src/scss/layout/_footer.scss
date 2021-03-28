@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  animation: flyInTop 1.5s 1;
   &__span {
     color: $orange4;
     &--link {
@@ -17,22 +18,11 @@
       }
     }
   }
+  &__italic {
+    font-style: italic;
+  }
   @include tablet {
     position: fixed;
     bottom: 0;
-  }
-}
-
-.fly-in-bottom {
-  animation: flyinBottom 1.2s ease-in;
-}
-@keyframes flyinBottom {
-  0% {
-    transform: translatey(rem(1000));
-    opacity: 0;
-  }
-  100% {
-    transform: translatey(0);
-    opacity: 1;
   }
 }

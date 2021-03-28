@@ -8,6 +8,7 @@
     @include flexCenter;
     flex-wrap: wrap;
     max-width: rem(350);
+    animation: flyInTop 1.5s 1;
     &-img {
       width: rem(70);
       margin: rem(5);
@@ -18,9 +19,6 @@
       &:hover {
         transform: scale(1.05);
       }
-      // &:active {
-      //   transform: rotate3d(0, 1, 0, 90deg);
-      // }
       @include tablet {
         width: rem(100);
       }
@@ -41,6 +39,7 @@
   background-color: $orange3;
   margin: rem(10) auto;
   transition: $trans;
+  animation: flyInTop 1.5s 1;
   &:hover {
     background-color: $orange2;
     border: rem(4) solid $orange3;
