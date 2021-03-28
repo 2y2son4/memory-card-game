@@ -5,6 +5,8 @@ const grid = document.querySelector('.main__grid');
 const resultDisplay = document.querySelector('.result');
 const resetBtn = document.querySelector('.reset');
 
+const cardImgBack = './assets/images/back.png';
+
 let cardsChosen = [];
 let cardsChosenId = [];
 let cardsWon = [];
@@ -157,8 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (optionOneId === optionTwoId) {
       alert('Has seleccionado la misma Ale dos veces, closer 🤦');
-      cards[optionOneId].setAttribute('src', './assets/images/back.png');
-      cards[optionTwoId].setAttribute('src', './assets/images/back.png');
+      cards[optionOneId].setAttribute('src', cardImgBack);
+      cards[optionTwoId].setAttribute('src', cardImgBack);
     } else if (cardsChosen[0] === cardsChosen[1]) {
       alert('Eres listísima 🥳');
       cards[optionOneId].setAttribute('src', cardArray[optionOneId].imgBW);
@@ -168,8 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cardsWon.push(cardsChosen);
     } else {
       alert('Prueba otra vez, perdedora 🖕');
-      cards[optionOneId].setAttribute('src', './assets/images/back.png');
-      cards[optionTwoId].setAttribute('src', './assets/images/back.png');
+      cards[optionOneId].setAttribute('src', cardImgBack);
+      cards[optionTwoId].setAttribute('src', cardImgBack);
     }
 
     function ales() {
@@ -197,7 +199,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cardsChosen.length === 2) {
       setTimeout(checkForMatch, 500);
     }
+    this.classList.toggle('flip');
   }
+
+  let cards = document.querySelectorAll('.ales');
+  cards.forEach((card) => card.addEventListener('click', flipCard));
 
   createBoard();
 });
@@ -207,14 +213,5 @@ function resetGame() {
   location.reload();
 }
 resetBtn.addEventListener('click', resetGame);
-
-// let srcOptionOne;
-// for (let i = 0; i < cards.length; i++) {
-//   if (cardArray[cardId] === cards[i]) {
-//     srcOptionOne = cards[i].getAttribute('src');
-//     return console.log(srcOptionOne);
-//     // cards[optionOneId].setAttribute('src', srcOptionOne);
-//   }
-// }
 
 console.log('Feliz punteaños, tata 😘');

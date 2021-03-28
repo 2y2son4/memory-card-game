@@ -29,6 +29,11 @@
   }
 }
 
+.ales.flip {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
 .btn {
   cursor: url('../images/cursors/cursor_reset2.png'), auto;
   font-size: rem(18);
