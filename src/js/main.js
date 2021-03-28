@@ -16,128 +16,138 @@ document.addEventListener('DOMContentLoaded', () => {
   // card options
   const cardArray = [
     {
-      name: 'ale-01',
+      name: '01',
       img: './assets/images/01.jpg',
       imgBW: './assets/images/bw/01.jpg',
     },
     {
-      name: 'ale-02',
+      name: '02',
       img: './assets/images/02.jpg',
       imgBW: './assets/images/bw/02.jpg',
     },
     {
-      name: 'ale-03',
+      name: '03',
       img: './assets/images/03.jpg',
       imgBW: './assets/images/bw/03.jpg',
     },
     {
-      name: 'ale-04',
+      name: '04',
       img: './assets/images/04.jpg',
       imgBW: './assets/images/bw/04.jpg',
     },
     {
-      name: 'ale-05',
+      name: '05',
       img: './assets/images/05.jpg',
       imgBW: './assets/images/bw/05.jpg',
     },
     {
-      name: 'ale-06',
+      name: '06',
       img: './assets/images/06.jpg',
       imgBW: './assets/images/bw/06.jpg',
     },
     {
-      name: 'ale-07',
+      name: '07',
       img: './assets/images/07.jpg',
       imgBW: './assets/images/bw/07.jpg',
     },
     {
-      name: 'ale-08',
+      name: '08',
       img: './assets/images/08.jpg',
       imgBW: './assets/images/bw/08.jpg',
     },
     {
-      name: 'ale-09',
+      name: '09',
       img: './assets/images/09.jpg',
       imgBW: './assets/images/bw/09.jpg',
     },
     {
-      name: 'ale-10',
+      name: '10',
       img: './assets/images/10.jpg',
       imgBW: './assets/images/bw/10.jpg',
     },
     {
-      name: 'ale-11',
+      name: '11',
       img: './assets/images/11.jpg',
       imgBW: './assets/images/bw/11.jpg',
     },
     {
-      name: 'ale-12',
+      name: '12',
       img: './assets/images/12.jpg',
       imgBW: './assets/images/bw/12.jpg',
     },
     {
-      name: 'ale-01',
+      name: '01',
       img: './assets/images/01.jpg',
       imgBW: './assets/images/bw/01.jpg',
     },
     {
-      name: 'ale-02',
+      name: '02',
       img: './assets/images/02.jpg',
       imgBW: './assets/images/bw/02.jpg',
     },
     {
-      name: 'ale-03',
+      name: '03',
       img: './assets/images/03.jpg',
       imgBW: './assets/images/bw/03.jpg',
     },
     {
-      name: 'ale-04',
+      name: '04',
       img: './assets/images/04.jpg',
       imgBW: './assets/images/bw/04.jpg',
     },
     {
-      name: 'ale-05',
+      name: '05',
       img: './assets/images/05.jpg',
       imgBW: './assets/images/bw/05.jpg',
     },
     {
-      name: 'ale-06',
+      name: '06',
       img: './assets/images/06.jpg',
       imgBW: './assets/images/bw/06.jpg',
     },
     {
-      name: 'ale-07',
+      name: '07',
       img: './assets/images/07.jpg',
       imgBW: './assets/images/bw/07.jpg',
     },
     {
-      name: 'ale-08',
+      name: '08',
       img: './assets/images/08.jpg',
       imgBW: './assets/images/bw/08.jpg',
     },
     {
-      name: 'ale-09',
+      name: '09',
       img: './assets/images/09.jpg',
       imgBW: './assets/images/bw/09.jpg',
     },
     {
-      name: 'ale-10',
+      name: '10',
       img: './assets/images/10.jpg',
       imgBW: './assets/images/bw/10.jpg',
     },
     {
-      name: 'ale-11',
+      name: '11',
       img: './assets/images/11.jpg',
       imgBW: './assets/images/bw/11.jpg',
     },
     {
-      name: 'ale-12',
+      name: '12',
       img: './assets/images/12.jpg',
       imgBW: './assets/images/bw/12.jpg',
     },
   ];
 
-  cardArray.sort(() => 0.5 - Math.random());
+  function randomize() {
+    const randomCards = cardArray.sort(() => 0.5 - Math.random());
+    let solution = randomCards.map((randomCard) => {
+      return randomCard.name;
+    });
+
+    console.log('Esta es la solución, copiota', solution);
+    return randomCards;
+  }
+
+  randomize();
 
   // create board
   function createBoard() {
