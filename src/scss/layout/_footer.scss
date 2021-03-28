@@ -1,7 +1,34 @@
-.page__footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  padding: 1rem;
+.footer {
+  width: 100%;
+  height: rem(50);
+  padding: rem(20);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  &__span {
+    color: $orange4;
+    &--link {
+      cursor: url('../images/cursor_hand.png'), auto;
+      color: $green2;
+      transition: none;
+      &:hover {
+        padding-bottom: rem(5);
+        border-bottom: rem(2) $green2 solid;
+      }
+    }
+  }
+}
+
+.fly-in-bottom {
+  animation: flyinBottom 1.2s ease-in;
+}
+@keyframes flyinBottom {
+  0% {
+    transform: translatey(rem(1000));
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
 }

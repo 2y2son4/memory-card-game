@@ -9,12 +9,18 @@
       flex-direction: column;
     }
   }
-  margin: rem(10);
+  &__title {
+    height: rem(40);
+    @include tablet {
+      height: rem(100);
+    }
+  }
   &__img {
     width: rem(300);
-    margin: rem(20);
+    margin: rem(10);
     @include tablet {
       width: rem(600);
+      margin: rem(20);
     }
   }
   &__text {

@@ -7,8 +7,9 @@
     cursor: url('../images/cursor_HALP2.png'), auto;
     @include flexCenter;
     flex-wrap: wrap;
-    max-width: rem(800);
+    max-width: rem(350);
     &-img {
+      width: rem(70);
       margin: rem(5);
       border: rem(4) solid $green1;
       border-radius: rem(10);
@@ -20,6 +21,12 @@
       // &:active {
       //   transform: rotate3d(0, 1, 0, 90deg);
       // }
+      @include tablet {
+        width: rem(100);
+      }
+    }
+    @include tablet {
+      max-width: rem(700);
     }
   }
 }

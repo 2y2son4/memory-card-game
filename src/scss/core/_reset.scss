@@ -8,8 +8,14 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
+  transition: $trans;
 }
 
 body {
   cursor: url('../images/cursor.png'), auto;
+}
+
+::selection {
+  color: $orange1;
+  background-color: $orange4;
 }
