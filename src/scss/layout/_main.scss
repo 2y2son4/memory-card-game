@@ -8,7 +8,7 @@
     @include flexCenter;
     flex-wrap: wrap;
     max-width: rem(350);
-    animation: flyInTop 1.5s 1;
+    animation: flyInLeft 2s 1;
     &-img {
       width: rem(70);
       margin: rem(5);
@@ -31,7 +31,6 @@
 
 .ales.flip {
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
 }
 
 .btn {
@@ -44,7 +43,7 @@
   background-color: $orange3;
   margin: rem(10) auto;
   transition: $trans;
-  animation: flyInTop 1.5s 1;
+  animation: flyInLeft 2.2s 1;
   &:hover {
     background-color: $orange2;
     border: rem(4) solid $orange3;

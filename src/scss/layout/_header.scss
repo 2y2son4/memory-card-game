@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  // animation: flyInTop 1.5s 1;
   @include tablet {
     @include flexCenter {
       flex-direction: column;
@@ -10,7 +11,7 @@
   }
   &__title {
     height: rem(40);
-    animation: flyInTop 1.5s 1;
+
     @include tablet {
       height: rem(100);
     }
@@ -18,6 +19,7 @@
   &__img {
     width: rem(300);
     margin: rem(10);
+    animation: flyInTop 1s 1;
     @include tablet {
       width: rem(550);
       margin: rem(40);
@@ -25,80 +27,30 @@
   }
   &__text {
     font-size: rem(18);
+    font-weight: bold;
     color: $green2;
+    text-align: center;
     margin: rem(10) auto;
+    animation: flyInTop 1.2s 1;
     @include tablet {
       font-size: rem(30);
       margin: rem(30) auto rem(10);
     }
+    &--clue {
+      font-size: rem(16);
+      font-weight: bold;
+      color: $green2;
+      text-align: center;
+      padding: rem(5);
+      animation: flyInTop 1.4s 1;
+      @include tablet {
+        font-size: rem(18);
+        margin: rem(30) auto rem(10);
+      }
+    }
   }
 }
-
-.carrot {
-  @include desktop {
-    &_A {
-      cursor: url('../images/cursors/cursor_rabbit2.png'), auto;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: rem(80);
-      height: rem(100);
-      margin: rem(30);
-      background-image: url('.././images/carrots/carrot_a.svg');
-      background-repeat: no-repeat;
-      animation: carrot_A_C 0.4s 2;
-      transition: $trans;
-      &:hover {
-        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-      }
-    }
-    &_B {
-      cursor: url('../images/cursors/cursor_rabbit2.png'), auto;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: rem(80);
-      height: rem(100);
-      margin: rem(30);
-      background-image: url('.././images/carrots/carrot_b.svg');
-      background-repeat: no-repeat;
-      animation: carrot_B_D 0.4s 2;
-      transition: $trans;
-      &:hover {
-        animation: shake2 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-      }
-    }
-    &_C {
-      cursor: url('../images/cursors/cursor_rabbit2.png'), auto;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: rem(80);
-      height: rem(100);
-      margin: rem(30);
-      background-image: url('.././images/carrots/carrot_c.svg');
-      background-repeat: no-repeat;
-      animation: carrot_A_C 0.4s 2;
-      transition: $trans;
-      &:hover {
-        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-      }
-    }
-    &_D {
-      cursor: url('../images/cursors/cursor_rabbit2.png'), auto;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: rem(80);
-      height: rem(100);
-      margin: rem(30);
-      background-image: url('.././images/carrots/carrot_d.svg');
-      background-repeat: no-repeat;
-      animation: carrot_B_D 0.4s 2;
-      transition: $trans;
-      &:hover {
-        animation: shake2 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-      }
-    }
-  }
+.result,
+.clue {
+  font-weight: normal;
 }

@@ -3,6 +3,7 @@
 
 const grid = document.querySelector('.main__grid');
 const resultDisplay = document.querySelector('.result');
+const clueDisplay = document.querySelector('.clue');
 const resetBtn = document.querySelector('.reset');
 
 const cardImgBack = './assets/images/back.png';
@@ -154,39 +155,42 @@ document.addEventListener('DOMContentLoaded', () => {
   function checkForMatch() {
     let cards = document.querySelectorAll('.ales');
 
-    const optionOneId = cardsChosenId[0];
-    const optionTwoId = cardsChosenId[1];
+    const firstCard = cardsChosenId[0];
+    const secondCard = cardsChosenId[1];
 
-    if (optionOneId === optionTwoId) {
-      alert('Has seleccionado la misma Ale dos veces, closer 🤦');
-      cards[optionOneId].setAttribute('src', cardImgBack);
-      cards[optionTwoId].setAttribute('src', cardImgBack);
+    if (firstCard === secondCard) {
+      clueDisplay.textContent = 'Has seleKcionado la misma Ale dos veces, closer 🤦';
+      cards[firstCard].setAttribute('src', cardImgBack);
+      cards[secondCard].setAttribute('src', cardImgBack);
     } else if (cardsChosen[0] === cardsChosen[1]) {
-      alert('Eres listísima 🥳');
-      cards[optionOneId].setAttribute('src', cardArray[optionOneId].imgBW);
-      cards[optionTwoId].setAttribute('src', cardArray[optionTwoId].imgBW);
-      cards[optionOneId].removeEventListener('click', flipCard);
-      cards[optionTwoId].removeEventListener('click', flipCard);
+      clueDisplay.textContent = 'Eres listísima 🥳';
+      cards[firstCard].setAttribute('src', cardArray[firstCard].imgBW);
+      cards[secondCard].setAttribute('src', cardArray[secondCard].imgBW);
+      cards[firstCard].removeEventListener('click', flipCard);
+      cards[secondCard].removeEventListener('click', flipCard);
       cardsWon.push(cardsChosen);
     } else {
-      alert('Prueba otra vez, perdedora 🖕');
-      cards[optionOneId].setAttribute('src', cardImgBack);
-      cards[optionTwoId].setAttribute('src', cardImgBack);
+      clueDisplay.textContent = 'Prueba otra vez, perdedora 🖕';
+      cards[firstCard].setAttribute('src', cardImgBack);
+      cards[secondCard].setAttribute('src', cardImgBack);
     }
 
-    function ales() {
-      if (cardsWon.length === 1) {
-        return 'Ale';
+    function ales(length) {
+      if (cardsWon.length === 0) {
+        return 'CERO Ales 😭';
+      } else if (cardsWon.length === 1) {
+        return length + ' ' + 'Ale 🤓';
       } else {
-        return 'Ales';
+        return length + ' ' + 'Ales 🤓';
       }
     }
     cardsChosen = [];
     cardsChosenId = [];
-    resultDisplay.textContent = 'Puntuación:' + ' ' + cardsWon.length + ' ' + ales();
+    resultDisplay.textContent = ales(cardsWon.length);
 
     if (cardsWon.length === cardArray.length / 2) {
       resultDisplay.textContent = 'Lo sabía, tata. Has ganado.';
+      clueDisplay.textContent = 'Dale al botoncincli de abajo o... ¡Hasta nunqui!';
     }
   }
 
@@ -197,13 +201,10 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsChosenId.push(cardId);
     this.setAttribute('src', cardArray[cardId].img);
     if (cardsChosen.length === 2) {
-      setTimeout(checkForMatch, 500);
+      setTimeout(checkForMatch, 800);
     }
     this.classList.toggle('flip');
   }
-
-  let cards = document.querySelectorAll('.ales');
-  cards.forEach((card) => card.addEventListener('click', flipCard));
 
   createBoard();
 });
