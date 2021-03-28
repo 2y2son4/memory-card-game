@@ -21,7 +21,7 @@
   &__italic {
     font-style: italic;
   }
-  @include tablet {
+  @include min-height {
     position: fixed;
     bottom: 0;
   }

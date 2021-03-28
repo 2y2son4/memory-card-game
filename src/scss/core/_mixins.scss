@@ -17,3 +17,9 @@
     @content;
   }
 }
+
+@mixin min-height {
+  @media all and (min-height: 750px) {
+    @content;
+  }
+}

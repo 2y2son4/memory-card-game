@@ -1,17 +1,10 @@
 .header {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   // animation: flyInTop 1.5s 1;
-  @include tablet {
-    @include flexCenter {
-      flex-direction: column;
-    }
-  }
   &__title {
     height: rem(40);
-
     @include tablet {
       height: rem(100);
     }
@@ -22,7 +15,7 @@
     animation: flyInTop 1s 1;
     @include tablet {
       width: rem(550);
-      margin: rem(40);
+      margin: rem(15);
     }
   }
   &__text {
@@ -33,19 +26,18 @@
     margin: rem(10) auto;
     animation: flyInTop 1.2s 1;
     @include tablet {
-      font-size: rem(30);
-      margin: rem(30) auto rem(10);
+      font-size: rem(24);
+      margin: rem(5) auto;
     }
     &--clue {
       font-size: rem(16);
       font-weight: bold;
       color: $green2;
       text-align: center;
-      padding: rem(5);
       animation: flyInTop 1.4s 1;
       @include tablet {
         font-size: rem(18);
-        margin: rem(30) auto rem(10);
+        margin: rem(5) auto;
       }
     }
   }

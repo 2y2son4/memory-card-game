@@ -1,8 +1,6 @@
 .main {
   @include flexCenter;
-  @include tablet {
-    padding: rem(20);
-  }
+
   &__grid {
     cursor: url('../images/cursors/cursor_question2.png'), auto;
     @include flexCenter;
