@@ -19,7 +19,7 @@
     margin: rem(10);
     @include tablet {
       width: rem(600);
-      margin: rem(20);
+      margin: rem(40);
     }
   }
   &__text {
@@ -44,73 +44,70 @@
     opacity: 1;
   }
 }
+
 .carrot {
   @include desktop {
     &_A {
-      cursor: url('../images/cursor_rabbit.png'), auto;
+      cursor: url('../images/cursors/cursor_rabbit2.png'), auto;
       position: absolute;
       left: 0;
       top: 0;
       width: rem(80);
       height: rem(100);
       margin: rem(30);
-      background-image: url('.././images/carrot_a.svg');
+      background-image: url('.././images/carrots/carrot_a.svg');
       background-repeat: no-repeat;
       animation: carrot_A_C 0.4s 2;
       transition: $trans;
       &:hover {
-        // transform: rotate(-360deg);
         animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
       }
     }
     &_B {
-      cursor: url('../images/cursor_rabbit.png'), auto;
+      cursor: url('../images/cursors/cursor_rabbit2.png'), auto;
       position: absolute;
       right: 0;
       top: 0;
       width: rem(80);
       height: rem(100);
       margin: rem(30);
-      background-image: url('.././images/carrot_b.svg');
+      background-image: url('.././images/carrots/carrot_b.svg');
       background-repeat: no-repeat;
       animation: carrot_B_D 0.4s 2;
       transition: $trans;
       &:hover {
-        // transform: rotate(360deg);
         animation: shake2 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
       }
     }
     &_C {
-      cursor: url('../images/cursor_rabbit.png'), auto;
+      cursor: url('../images/cursors/cursor_rabbit2.png'), auto;
       position: absolute;
       right: 0;
       bottom: 0;
       width: rem(80);
       height: rem(100);
       margin: rem(30);
-      background-image: url('.././images/carrot_c.svg');
+      background-image: url('.././images/carrots/carrot_c.svg');
       background-repeat: no-repeat;
       animation: carrot_A_C 0.4s 2;
       transition: $trans;
       &:hover {
-        // transform: rotate(-360deg);
         animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
       }
     }
     &_D {
-      cursor: url('../images/cursor_rabbit.png'), auto;
+      cursor: url('../images/cursors/cursor_rabbit2.png'), auto;
       position: absolute;
       left: 0;
       bottom: 0;
       width: rem(80);
       height: rem(100);
       margin: rem(30);
-      background-image: url('.././images/carrot_d.svg');
+      background-image: url('.././images/carrots/carrot_d.svg');
       background-repeat: no-repeat;
       animation: carrot_B_D 0.4s 2;
       transition: $trans;
       &:hover {
-        // transform: rotate(360deg);
         animation: shake2 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
       }
     }

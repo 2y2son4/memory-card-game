@@ -12,10 +12,10 @@
 }
 
 html {
-  cursor: url('../images/cursor.png'), auto;
+  cursor: url('../images/cursors/cursor.png'), auto;
 }
 
 ::selection {
-  color: $orange1;
-  background-color: $orange4;
+  color: $green2;
+  background-color: #fabada;
 }

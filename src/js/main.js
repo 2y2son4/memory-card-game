@@ -15,98 +15,122 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: 'ale-01',
       img: './assets/images/01.jpg',
+      imgBW: './assets/images/bw/01.jpg',
     },
     {
       name: 'ale-02',
       img: './assets/images/02.jpg',
+      imgBW: './assets/images/bw/02.jpg',
     },
     {
       name: 'ale-03',
       img: './assets/images/03.jpg',
+      imgBW: './assets/images/bw/03.jpg',
     },
     {
       name: 'ale-04',
       img: './assets/images/04.jpg',
+      imgBW: './assets/images/bw/04.jpg',
     },
     {
       name: 'ale-05',
       img: './assets/images/05.jpg',
+      imgBW: './assets/images/bw/05.jpg',
     },
     {
       name: 'ale-06',
       img: './assets/images/06.jpg',
+      imgBW: './assets/images/bw/06.jpg',
     },
     {
       name: 'ale-07',
       img: './assets/images/07.jpg',
+      imgBW: './assets/images/bw/07.jpg',
     },
     {
       name: 'ale-08',
       img: './assets/images/08.jpg',
+      imgBW: './assets/images/bw/08.jpg',
     },
     {
       name: 'ale-09',
       img: './assets/images/09.jpg',
+      imgBW: './assets/images/bw/09.jpg',
     },
     {
       name: 'ale-10',
       img: './assets/images/10.jpg',
+      imgBW: './assets/images/bw/10.jpg',
     },
     {
       name: 'ale-11',
       img: './assets/images/11.jpg',
+      imgBW: './assets/images/bw/11.jpg',
     },
     {
       name: 'ale-12',
       img: './assets/images/12.jpg',
+      imgBW: './assets/images/bw/12.jpg',
     },
     {
       name: 'ale-01',
       img: './assets/images/01.jpg',
+      imgBW: './assets/images/bw/01.jpg',
     },
     {
       name: 'ale-02',
       img: './assets/images/02.jpg',
+      imgBW: './assets/images/bw/02.jpg',
     },
     {
       name: 'ale-03',
       img: './assets/images/03.jpg',
+      imgBW: './assets/images/bw/03.jpg',
     },
     {
       name: 'ale-04',
       img: './assets/images/04.jpg',
+      imgBW: './assets/images/bw/04.jpg',
     },
     {
       name: 'ale-05',
       img: './assets/images/05.jpg',
+      imgBW: './assets/images/bw/05.jpg',
     },
     {
       name: 'ale-06',
       img: './assets/images/06.jpg',
+      imgBW: './assets/images/bw/06.jpg',
     },
     {
       name: 'ale-07',
       img: './assets/images/07.jpg',
+      imgBW: './assets/images/bw/07.jpg',
     },
     {
       name: 'ale-08',
       img: './assets/images/08.jpg',
+      imgBW: './assets/images/bw/08.jpg',
     },
     {
       name: 'ale-09',
       img: './assets/images/09.jpg',
+      imgBW: './assets/images/bw/09.jpg',
     },
     {
       name: 'ale-10',
       img: './assets/images/10.jpg',
+      imgBW: './assets/images/bw/10.jpg',
     },
     {
       name: 'ale-11',
       img: './assets/images/11.jpg',
+      imgBW: './assets/images/bw/11.jpg',
     },
     {
       name: 'ale-12',
       img: './assets/images/12.jpg',
+      imgBW: './assets/images/bw/12.jpg',
     },
   ];
 
@@ -137,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionTwoId].setAttribute('src', './assets/images/back.png');
     } else if (cardsChosen[0] === cardsChosen[1]) {
       alert('Eres listísima 🥳');
-      cards[optionOneId].setAttribute('src', './assets/images/blank.png');
-      cards[optionTwoId].setAttribute('src', './assets/images/blank.png');
+      cards[optionOneId].setAttribute('src', cardArray[optionOneId].imgBW);
+      cards[optionTwoId].setAttribute('src', cardArray[optionTwoId].imgBW);
       cards[optionOneId].removeEventListener('click', flipCard);
       cards[optionTwoId].removeEventListener('click', flipCard);
       cardsWon.push(cardsChosen);
@@ -183,5 +207,14 @@ function resetGame() {
   location.reload();
 }
 resetBtn.addEventListener('click', resetGame);
+
+// let srcOptionOne;
+// for (let i = 0; i < cards.length; i++) {
+//   if (cardArray[cardId] === cards[i]) {
+//     srcOptionOne = cards[i].getAttribute('src');
+//     return console.log(srcOptionOne);
+//     // cards[optionOneId].setAttribute('src', srcOptionOne);
+//   }
+// }
 
 console.log('Feliz punteaños, tata 😘');

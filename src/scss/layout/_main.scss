@@ -4,7 +4,7 @@
     padding: rem(20);
   }
   &__grid {
-    cursor: url('../images/cursor_HALP2.png'), auto;
+    cursor: url('../images/cursors/cursor_question2.png'), auto;
     @include flexCenter;
     flex-wrap: wrap;
     max-width: rem(350);
@@ -32,7 +32,7 @@
 }
 
 .btn {
-  cursor: url('../images/cursor_reset.png'), auto;
+  cursor: url('../images/cursors/cursor_reset2.png'), auto;
   font-size: rem(18);
   font-weight: bold;
   color: $green3;
