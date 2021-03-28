@@ -17,6 +17,9 @@
       &:hover {
         transform: scale(1.05);
       }
+      // &:active {
+      //   transform: rotate3d(0, 1, 0, 90deg);
+      // }
     }
   }
 }
@@ -29,6 +32,7 @@
   border: rem(4) solid $orange4;
   border-radius: rem(10);
   background-color: $orange3;
+  margin: rem(10) auto;
   transition: $trans;
   &:hover {
     background-color: $orange2;
@@ -36,12 +40,16 @@
     color: $green2;
   }
   &__icon {
-    font-size: rem(30);
-    padding: rem(10);
+    font-size: rem(20);
+    padding: rem(5);
     transition: $trans;
     &:hover {
       transform: rotate(360deg);
       color: $green2;
+    }
+    @include tablet {
+      font-size: rem(30);
+      padding: rem(10);
     }
   }
 }

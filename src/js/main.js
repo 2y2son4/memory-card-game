@@ -186,4 +186,4 @@ document.addEventListener('DOMContentLoaded', () => {
   createBoard();
 });
 
-console.log('Feliz punteaños, tata.');
+console.log('Feliz punteaños, tata 😘');
